@@ -55,12 +55,12 @@ public class Flight {
     @OneToMany(mappedBy = "flight")
     private Set<Passenger> passenger = new HashSet<>();
     
-    public Flight(long flightId,String flightNumber,int seatCapacity,String flightName ) {
-    	this.flightId = flightId;
-        this.flightNumber = flightNumber;
-        this.seatCapacity = seatCapacity;
-        this.flightName = flightName;
-    }
+//    public Flight(long flightId,String flightNumber,int seatCapacity,String flightName ) {
+//    	this.flightId = flightId;
+//        this.flightNumber = flightNumber;
+//        this.seatCapacity = seatCapacity;
+//        this.flightName = flightName;
+//    }
 
 	public long getFlightId() {
 		return flightId;

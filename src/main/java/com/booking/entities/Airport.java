@@ -30,13 +30,13 @@ public class Airport {
     @OneToMany(mappedBy = "departureAirport")
     private Set<Flight> flight = new HashSet<>();
     
-    public Airport(String airportCode, String airportName, String city, String state, String country) {
-        this.airportCode = airportCode;
-        this.airportName = airportName;
-        this.city = city;
-        this.state = state;
-        this.country = country;
-    }
+//    public Airport(String airportCode, String airportName, String city, String state, String country) {
+//        this.airportCode = airportCode;
+//        this.airportName = airportName;
+//        this.city = city;
+//        this.state = state;
+//        this.country = country;
+//    }
 
 	public int getAirportId() {
 		return airportId;
