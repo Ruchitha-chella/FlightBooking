@@ -5,6 +5,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 import javax.persistence.EntityNotFoundException;
+import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,6 +16,7 @@ import com.booking.entities.Flight;
 
 
 @Service
+@Transactional
 public class FlightServiceImpl implements FlightService{
 	@Autowired
 	private FlightRepository flightRepository;
