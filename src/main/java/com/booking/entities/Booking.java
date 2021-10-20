@@ -25,12 +25,12 @@ public class Booking {
 	 @OneToOne(mappedBy="booking")
 	 private Passenger passenger;
 	 
-//	 public Booking( String seatType, String mealType, Integer numOfSeats) {
-//
-//	        this.seatType = seatType;
-//	        this.mealType = mealType;
-//	        this.numOfSeats = numOfSeats;
-//	}
+	 public Booking( String seatType, String mealType, Integer numOfSeats) {
+
+	        this.seatType = seatType;
+	        this.mealType = mealType;
+	        this.numOfSeats = numOfSeats;
+	}
 
 	public long getBookingId() {
 		return bookingId;
