@@ -48,16 +48,16 @@ public class Passenger {
 	 @JoinColumn(name="bookingId")
 	 private Booking booking;
 	 
-	 public Passenger( String firstName, String lastName, String phoneNumber, int passengerAge, String passportNumber, String email, Double luggage, String address) {
-	        this.firstName = firstName;
-	        this.lastName = lastName;
-	        this.phoneNumber = phoneNumber;
-	        this.passengerAge = passengerAge;
-	        this.passportNumber = passportNumber;
-	        this.email = email;
-	        this.luggage = luggage;
-	        this.address = address;
-	    }
+//	 public Passenger( String firstName, String lastName, String phoneNumber, int passengerAge, String passportNumber, String email, Double luggage, String address) {
+//	        this.firstName = firstName;
+//	        this.lastName = lastName;
+//	        this.phoneNumber = phoneNumber;
+//	        this.passengerAge = passengerAge;
+//	        this.passportNumber = passportNumber;
+//	        this.email = email;
+//	        this.luggage = luggage;
+//	        this.address = address;
+//	    }
 
 	public long getPassengerId() {
 		return passengerId;
