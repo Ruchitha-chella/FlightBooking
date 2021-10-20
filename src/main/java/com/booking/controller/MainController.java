@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
@@ -29,6 +30,7 @@ import com.booking.services.PassengerService;
 
 
 @RestController
+@RequestMapping("/api/v1.0/flight")
 public class MainController {
 	@Autowired
     AirportService airportService;
@@ -39,7 +41,7 @@ public class MainController {
     @Autowired
     BookingService bookingService;
     
-    @PostMapping("/flight/stock/add")
+    @PostMapping("/stock/add")
 	@ResponseStatus(HttpStatus.CREATED)
 	public ResponseEntity<Flight> addFlight(@Valid @RequestBody Flight flight) {
 		Flight flight1 = flightService.addFlight(flight);
@@ -49,24 +51,24 @@ public class MainController {
 		return ResponseEntity.created(location).body(flight1);
 	}
     
-    @DeleteMapping("/flight/airline/delete")
+    @DeleteMapping("/airline/delete")
     public void deleteFlightByRoute(@RequestParam String flightNumber) {
     	flightService.deleteFlightByRoute(flightNumber);
     }
     
-    @GetMapping("/flight/info/{id}")
+    @GetMapping("/info/{id}")
 	public Flight getFlightById(@RequestParam long flightId) {
 		System.out.println(flightId);
 		return flightService.getFlightById(flightId);
 	}
     
-    @PostMapping("/flight/booking/register")
+    @PostMapping("/booking/register")
     public Booking addBooking(@Valid @RequestBody Booking booking) {
     	return bookingService.addBooking(booking);
     }
     
 
-	@GetMapping("/flight/getall")
+	@GetMapping("/getall")
     public List<Flight> getAllFlights() {
     	return flightService.getAllFlights();
     }
